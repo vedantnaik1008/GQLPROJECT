@@ -1,10 +1,21 @@
 import './App.css';
+import {
+    ApolloClient,
+    InMemoryCache,
+    ApolloProvider
+} from '@apollo/client';
+import Home from './components/Home';
+
+const client = new ApolloClient({
+    uri: 'https://countries.trevorblades.com/',
+    cache: new InMemoryCache()
+});
 
 function App() {
   return (
-      <div className=''>
-          <h1 className='text-3xl text-red-500 font-bold underline'>Hello world!</h1>
-      </div>
+    <ApolloProvider client={client}>
+      <Home />
+    </ApolloProvider>
   );
 }
 
