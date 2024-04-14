@@ -5,6 +5,7 @@ import {
     ApolloProvider
 } from '@apollo/client';
 import Home from './components/Home';
+import Search from './components/Search';
 
 const client = new ApolloClient({
     uri: 'https://countries.trevorblades.com',
@@ -14,6 +15,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
+      <Search />
       <Home />
     </ApolloProvider>
   );
