@@ -7,7 +7,7 @@ import {
 import Home from './components/Home';
 
 const client = new ApolloClient({
-    uri: 'https://countries.trevorblades.com/',
+    uri: 'https://countries.trevorblades.com',
     cache: new InMemoryCache()
 });
 
